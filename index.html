@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROAST &amp; CO — Крафтова кава та аксесуари</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="top-banner">
+        <div class="wrapper">
+            <h1 class="brand-logo">ROAST &amp; CO</h1>
+            <p class="brand-subtitle">Свіжообсмажена кава в зернах та мелена з доставкою</p>
+        </div>
+    </header>
+
+    <main class="wrapper shop-layout">
+        <!-- Секція товарів -->
+        <section class="catalog-grid">
+
+            <!-- Товар 1 -->
+            <article class="product-box" data-product-id="c-01">
+                <div class="product-thumb">
+                    <img class="product-photo" src="img/ethiopia.jpg" alt="Ефіопія Іргачеффе">
+                    <span class="product-badge">100% Арабіка</span>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-name">Ефіопія Іргачеффе</h2>
+                    <p class="product-pack" data-pack-info>Пачка 250 г</p>
+
+                    <div class="product-controls">
+                        <div class="qty-box" data-qty-wrapper>
+                            <button type="button" class="qty-btn" data-step="dec">-</button>
+                            <span class="qty-val" data-qty-value>1</span>
+                            <button type="button" class="qty-btn" data-step="inc">+</button>
+                        </div>
+
+                        <div class="cost-box">
+                            <span class="cost-unit">Зерно / Мелена</span>
+                            <span class="cost-amount">340 грн</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="add-cart-btn" data-add-btn>Додати в кошик</button>
+                </div>
+            </article>
+
+            <!-- Товар 2 -->
+            <article class="product-box" data-product-id="c-02">
+                <div class="product-thumb">
+                    <img class="product-photo" src="img/colombia.png" alt="Колумбія Супремо">
+                    <span class="product-badge">Середнє обсмаження</span>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-name">Колумбія Супремо</h2>
+                    <p class="product-pack" data-pack-info>Пачка 250 г</p>
+
+                    <div class="product-controls">
+                        <div class="qty-box" data-qty-wrapper>
+                            <button type="button" class="qty-btn" data-step="dec">-</button>
+                            <span class="qty-val" data-qty-value>1</span>
+                            <button type="button" class="qty-btn" data-step="inc">+</button>
+                        </div>
+
+                        <div class="cost-box">
+                            <span class="cost-unit">Зерно / Мелена</span>
+                            <span class="cost-amount">310 грн</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="add-cart-btn" data-add-btn>Додати в кошик</button>
+                </div>
+            </article>
+
+            <!-- Товар 3 -->
+            <article class="product-box" data-product-id="c-03">
+                <div class="product-thumb">
+                    <img class="product-photo" src="img/brazil.webp" alt="Бразилія Сантос">
+                    <span class="product-badge">Низька кислинка</span>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-name">Бразилія Сантос</h2>
+                    <p class="product-pack" data-pack-info>Пачка 500 г</p>
+
+                    <div class="product-controls">
+                        <div class="qty-box" data-qty-wrapper>
+                            <button type="button" class="qty-btn" data-step="dec">-</button>
+                            <span class="qty-val" data-qty-value>1</span>
+                            <button type="button" class="qty-btn" data-step="inc">+</button>
+                        </div>
+
+                        <div class="cost-box">
+                            <span class="cost-unit">Зерно</span>
+                            <span class="cost-amount">560 грн</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="add-cart-btn" data-add-btn>Додати в кошик</button>
+                </div>
+            </article>
+
+            <!-- Товар 4 -->
+            <article class="product-box" data-product-id="c-04">
+                <div class="product-thumb">
+                    <img class="product-photo" src="img/blend.png" alt="Фірмовий бленд Crema">
+                    <span class="product-badge">Для еспресо</span>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-name">Фірмовий бленд Crema</h2>
+                    <p class="product-pack" data-pack-info>Пачка 1000 г</p>
+
+                    <div class="product-controls">
+                        <div class="qty-box" data-qty-wrapper>
+                            <button type="button" class="qty-btn" data-step="dec">-</button>
+                            <span class="qty-val" data-qty-value>1</span>
+                            <button type="button" class="qty-btn" data-step="inc">+</button>
+                        </div>
+
+                        <div class="cost-box">
+                            <span class="cost-unit">80% Арабіка / 20% Робуста</span>
+                            <span class="cost-amount">890 грн</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="add-cart-btn" data-add-btn>Додати в кошик</button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Секція кошика -->
+        <aside class="basket-panel">
+            <div class="basket-card">
+                <h3 class="basket-heading">Ваше замовлення</h3>
+
+                <div class="basket-empty-msg" data-empty-alert>
+                    Наразі кошик порожній
+                </div>
+
+                <div class="basket-list" data-basket-list>
+                    <!-- Демо-позиція у кошику -->
+                    <div class="basket-row" data-product-id="c-02">
+                        <img class="basket-row-thumb" src="img/colombia.png" alt="Колумбія Супремо">
+                        <div class="basket-row-info">
+                            <div class="basket-row-title">Колумбія Супремо</div>
+                            <div class="basket-row-meta">Пачка 250 г</div>
+
+                            <div class="basket-row-bottom">
+                                <div class="qty-box qty-box--compact" data-qty-wrapper>
+                                    <button type="button" class="qty-btn" data-step="dec">-</button>
+                                    <span class="qty-val" data-qty-value>1</span>
+                                    <button type="button" class="qty-btn" data-step="inc">+</button>
+                                </div>
+                                <div class="basket-row-price">310 грн</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basket-summary">
+                    <p>Доставка: <span class="delivery-badge">Безкоштовно від 1000 грн</span></p>
+                    <p class="total-row">Разом: <span data-total-sum>310</span> грн</p>
+                </div>
+
+                <form class="checkout-form" id="checkoutForm">
+                    <label for="clientPhone" class="form-label">Оформити замовлення</label>
+                    <input type="tel" id="clientPhone" class="phone-input" placeholder="+38 (0__) ___-__-__" required>
+                    <button type="submit" class="submit-order-btn">Підтвердити замовлення</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <script src="js/counter.js"></script>
+</body>
+</html>

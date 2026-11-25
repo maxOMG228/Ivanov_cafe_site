@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f1ea;
+    color: #2c221e;
+    line-height: 1.5;
+}
+
+.wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.top-banner {
+    background-color: #2c221e;
+    color: #f4f1ea;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.brand-logo {
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #d4a373;
+}
+
+.brand-subtitle {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #dcd6cd;
+}
+
+/* Основна сітка: зліва товари, справа кошик */
+.shop-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+    padding-bottom: 50px;
+}
+
+/* Сітка карток товарів */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.product-box {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(44, 34, 30, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.product-box:hover {
+    transform: translateY(-3px);
+}
+
+/* Контейнер під фото товару */
+.product-thumb {
+    position: relative;
+    height: 190px;
+    background-color: #4a3525;
+    overflow: hidden;
+}
+
+.product-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-box:hover .product-photo {
+    transform: scale(1.04);
+}
+
+.product-badge {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    background: rgba(28, 20, 17, 0.78);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 5px 11px;
+    border-radius: 6px;
+}
+
+.product-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.product-pack {
+    font-size: 0.9rem;
+    color: #7d6e66;
+    margin-bottom: 18px;
+}
+
+.product-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+/* Лічильник */
+.qty-box {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f4f1ea;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0d8cc;
+}
+
+.qty-btn {
+    width: 36px;
+    height: 34px;
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c221e;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    user-select: none;
+}
+
+.qty-btn:hover {
+    background-color: #bc6c25;
+    color: #ffffff;
+}
+
+.qty-val {
+    width: 36px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Зменшений лічильник для кошика */
+.qty-box--compact .qty-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+}
+
+.qty-box--compact .qty-val {
+    width: 28px;
+    font-size: 0.9rem;
+}
+
+/* Ціна */
+.cost-box {
+    text-align: right;
+}
+
+.cost-unit {
+    display: block;
+    font-size: 0.75rem;
+    color: #7d6e66;
+}
+
+.cost-amount {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2c221e;
+}
+
+/* Кнопка додавання */
+.add-cart-btn {
+    width: 100%;
+    padding: 11px;
+    border: 2px solid #bc6c25;
+    background-color: transparent;
+    color: #bc6c25;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-cart-btn:hover {
+    background-color: #bc6c25;
+    color: #ffffff;
+}
+
+/* Панель кошика */
+.basket-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 15px rgba(44, 34, 30, 0.08);
+}
+
+.basket-heading {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ece6dd;
+}
+
+.basket-empty-msg {
+    background: #f4f1ea;
+    color: #6b5e57;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.basket-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #ece6dd;
+}
+
+.basket-row-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: #4a3525;
+}
+
+.basket-row-info {
+    flex-grow: 1;
+}
+
+.basket-row-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.basket-row-meta {
+    font-size: 0.8rem;
+    color: #7d6e66;
+    margin-bottom: 10px;
+}
+
+.basket-row-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basket-row-price {
+    font-weight: 700;
+    color: #bc6c25;
+}
+
+.basket-summary {
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
+.delivery-badge {
+    color: #2d6a4f;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.total-row {
+    margin-top: 8px;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.total-row span {
+    color: #bc6c25;
+}
+
+/* Форма */
+.checkout-form {
+    border-top: 1px solid #ece6dd;
+    padding-top: 15px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.phone-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d6ccc2;
+    border-radius: 8px;
+    font-family: inherit;
+    margin-bottom: 12px;
+}
+
+.submit-order-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c221e;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-order-btn:hover {
+    background-color: #4a3a33;
+}
+
+/* Адаптивність */
+@media (max-width: 900px) {
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 580px) {
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+}
